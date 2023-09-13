@@ -1,8 +1,12 @@
 package com.java_homework.practice_1;
+import java.util.Scanner;
 import java.math.*;
 public class ex7 {
         public static void main(String[] args) {
-            compute(123);
+            System.out.println("Введите число: ");
+            Scanner in = new Scanner(System.in);
+            int n = in.nextInt();
+            compute(n);
         }
 
         public static void compute(int n) {

@@ -1,4 +1,4 @@
-package com.java_homework.practice_2_2;
+package com.java_homework.practice_2.practice_2_2;
 import java.util.Scanner;
 public class TestBall {
     public static void main(String[] args) {

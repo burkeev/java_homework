@@ -1,4 +1,4 @@
-package com.java_homework.practice_2_2;
+package com.java_homework.practice_2.practice_2_2;
 
 public class Ball {
         private double x = 0.0;

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TestAuthor {
     public static void main(String[] args) {
         String email;
-        // we need to use functions from dz2.Author class
+
         Author k = new Author("John", "john@me.com", 'M');
         System.out.println("Name: " + k.getName());
 

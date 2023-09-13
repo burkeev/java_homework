@@ -11,7 +11,7 @@ public class ex4 {
         int maximum = -10000;
         int minimum = 10000;
         //прерывается любым другим символом кроме цифр
-        System.out.println("Введите числа:");
+        System.out.println("Введите числа: ");
         while (true) {
             int part = in.nextInt();
             list.add(part);

@@ -9,7 +9,7 @@ public class TestBall {
         ball.setY(scanner.nextDouble());
         System.out.println(ball.toString());
 
-        System.out.println("Введите, насколько переместиться точка: ");
+        System.out.println("Введите, насколько переместится точка: ");
         ball.move(scanner.nextDouble(), scanner.nextDouble());
         System.out.println(ball.toString());
 

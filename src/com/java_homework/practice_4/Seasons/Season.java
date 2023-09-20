@@ -6,8 +6,8 @@ public enum Season {
     SUMMER("Лето", 25),
     AUTUMN("Осень", 10);
 
-    private String name;
-    private int avgTemperature;
+    private final String name;
+    private final int avgTemperature;
 
     Season(String name, int avgTemperature) {
         this.name = name;
@@ -33,15 +33,11 @@ public enum Season {
     }
 
     public static void printSeasonInfo(Season season) {
-        switch(season) {
-            case WINTER:
-                System.out.println("Я люблю зиму");
-            case SPRING:
-                System.out.println("Я люблю весну");
-            case SUMMER:
-                System.out.println("Я люблю лето");
-            case AUTUMN:
-                System.out.println("Я люблю осень");
+        switch (season) {
+            case WINTER -> System.out.println("Я люблю зиму");
+            case SPRING -> System.out.println("Я люблю весну");
+            case SUMMER -> System.out.println("Я люблю лето");
+            case AUTUMN -> System.out.println("Я люблю осень");
         }
     }
 }

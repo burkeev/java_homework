@@ -1,5 +1,5 @@
 package com.java_homework.practice_4.Seasons;
-import java.util.Objects;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {

@@ -12,10 +12,12 @@ public enum Catalog {
     }
 
     public String[] getProducts() {
-        return this.products;
+        return products;
     }
 
+    //возвращает строку содержающую продукты, разделенные запятой
     public String getProductsAsString() {
-        return String.join(", ", this.products);
+        return String.join(", ", products);
     }
 }
+

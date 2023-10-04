@@ -1,10 +1,9 @@
 package com.java_homework.practice_4.Studio;
 import java.util.Scanner;
-import java.util.Arrays;
 public class Shop {
     public static void main(String[] args) {
-        System.out.println("Введите логин: ");
         Scanner in = new Scanner(System.in);
+        System.out.println("Введите логин: ");
         String login = in.nextLine();
         System.out.println("Введите пароль: ");
         String password = in.nextLine();
@@ -23,12 +22,22 @@ public class Shop {
 
             System.out.println("Введите название товара для добавления в корзину: ");
             String productChoice = in.next();
-            if (Arrays.asList(chosenCatalog.getProducts()).contains(productChoice)) {
-                System.out.println("Товар " + productChoice + " добавлен в корзину");
-            } else {
-                System.out.println("Выбранный товар не найден в каталоге");
-                continue;
+            boolean productExists = false;
+            for (String product : chosenCatalog.getProducts()) {
+                if (product.equalsIgnoreCase(productChoice)) {
+                    productExists = true;
+                    break;
+                }
             }
+            if (!productExists) {
+                System.out.println("Такого товара не существует");
+            }
+
+            if (productExists) {
+                System.out.println("Товар добавлен в корзину");
+            }
+
+
 
             System.out.println("Желаете совершить покупку? (да/нет)");
             String buyChoice = in.next();

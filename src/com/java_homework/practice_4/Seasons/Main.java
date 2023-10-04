@@ -3,27 +3,16 @@ package com.java_homework.practice_4.Seasons;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-
-        Scanner in = new Scanner(System.in);
-        System.out.println("Which season is your favorite? winter/spring/summer/autumn");
-        String temporary_season = in.nextLine();
-        Season myFavSeason = switch (temporary_season) {
-            case "spring" -> Season.SPRING;
-            case "summer" -> Season.SUMMER;
-            case "autumn" -> Season.AUTUMN;
-            default -> Season.WINTER;
-        };
+        System.out.println("Введите название сезона: ");
+        Scanner source = new Scanner(System.in);
+        String season2 = source.nextLine();
+        Seasons seasons = Seasons.valueOf(season2.toUpperCase());
+        System.out.println(seasons.getFavoriteSeason() + ". Её средняя температура: " + seasons.getAverageTemperature() +"\n");
 
 
-        System.out.println("1) Мое любимое время года: " + myFavSeason.getName());
-        System.out.println("2) Средняя температура: " + myFavSeason.getAvgTemperature());
-        System.out.println("3) Описание: " + myFavSeason.getDescription());
 
-        Season.printSeasonInfo(myFavSeason);
-
-        for(Season season : Season.values()) {
-            System.out.println(season.getName() + " " + season.getAvgTemperature() + " " + season.getDescription());
+        for (Seasons season : Seasons.values()) {
+            System.out.println(season.getName() + ": " + season.getAverageTemperature() + " градусов. " + season.getDescription());
         }
-
     }
 }
